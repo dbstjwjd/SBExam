@@ -1,0 +1,78 @@
+body, ul, li {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+.top {
+    background:darkseagreen;
+    padding:5px;
+}
+
+h1 {
+    font-size:2.5rem;
+    margin-left:15px;
+}
+
+.bottom {
+    display:flex;
+}
+
+.left {
+    width:13%;
+    height:800px;
+    text-align:center;
+    background:darkkhaki;
+}
+
+ul {
+    margin-top:20px;
+}
+
+.left li {
+    margin:10px;
+}
+
+.left a {
+    font-size:15pt;
+    font-weight:bold;
+}
+
+.left a:hover {
+    color:saddlebrown;
+}
+
+.right {
+    width:87%;
+    background:wheat;
+}
+
+.right_content {
+    margin:30px;
+}
+
+input {
+    font-size:12pt;
+    padding:5px;
+}
+
+p {
+    font-size:15pt;
+}
+
+.sub>input {
+    font-size:15pt;
+}
+
+.con>textarea {
+    font-size:15pt;
+}
+
+.right_content>input {
+    margin-top:10px;
+}

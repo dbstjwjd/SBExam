@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/board.css}">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <h1>logo</h1>
+    </div>
+    <div class="bottom">
+        <div class="left">
+            <ul>
+                <li th:each="post : ${postList}">
+                    <a th:href="@{|/detail/${post.id}|}" th:text="${post.subject}"></a>
+                </li>
+            </ul>
+            <form th:action="@{/create}" method="post">
+                <input type="submit" value="추가">
+            </form>
+        </div>
+        <div class="right">
+            <form th:if="${!postList.isEmpty()}" th:action="@{|/modify/${targetPost.id}|}" method="post">
+                <div class="right_content">
+                    <div class="sub">
+                        <p>제목</p>
+                        <input size="50" type="text" name="subject" th:value="${targetPost.subject}">
+                    </div>
+                    <div class="con">
+                        <p>내용</p>
+                        <textarea name="content" th:text="${targetPost.content}" cols="53" rows="10"></textarea>
+                    </div>
+                    <input type="submit" value="수정">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
